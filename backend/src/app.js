@@ -7,6 +7,7 @@ const helmet = require("helmet");
 
 const authRoutes = require("./routes/authRoutes");
 const cmsRoutes = require("./routes/cmsRoutes");
+const uploadRoutes = require("./routes/uploadRoutes");
 const inquiryRoutes = require("./routes/inquiryRoutes");
 
 const app = express();
@@ -35,6 +36,7 @@ app.get("/api/health", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/cms", cmsRoutes);
+app.use("/api/uploads", uploadRoutes);
 app.use("/api/inquiries", inquiryRoutes);
 
 app.use((req, res) => {

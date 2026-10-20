@@ -1,0 +1,10 @@
+-- CreateTable
+CREATE TABLE "UploadedFile" (
+    "id" SERIAL NOT NULL,
+    "filename" TEXT NOT NULL,
+    "mimeType" TEXT NOT NULL,
+    "data" BYTEA NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "UploadedFile_pkey" PRIMARY KEY ("id")
+);
